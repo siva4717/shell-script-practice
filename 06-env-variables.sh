@@ -2,4 +2,4 @@
 
 export COURSE="Shell script"
 
-echo "print course is:"$(COURSE)
+echo "print course is:"$COURSE
