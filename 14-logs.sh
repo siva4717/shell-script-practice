@@ -7,7 +7,8 @@ N="\e[0m"
 FILE_LOG_DIRECTORY="/var/log/shell-script/"
 SCRIPT_NAME=$(echo $0 | cut -d '.' -f1)
 FILE_LOG=$FILE_LOG_DIRECTORY/$SCRIPT_NAME.log
-mkdir -p $FILE_LOG_DIRECTORY    
+mkdir -p $FILE_LOG_DIRECTORY 
+echo -e "$G The script Started at ::: $(date)$N"
 
 if [ $USER_ID -ne 0 ]; then 
     echo -e " $R You can use root user $N" 
