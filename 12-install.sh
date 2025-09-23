@@ -5,21 +5,17 @@ if [ $USER_ID -ne 0 ]; then
     echo "You can use root user"
     exit 1
 fi
+
+VALIDATE(){
+    if [ $1 -ne 0 ]; then
+        echo "ERROR::$2 installing failure"
+    else
+        echo "$2 installing success"
+}
+
 dnf install mysql -y
-if [ $? -ne 0 ]; then
-    echo "Erorr::mysql install failure"
-else
-    echo "MYSQL install success"
-fi
+VALIDATE $? "MYSQL"
 dnf install nginx -y
-if [ $? -ne 0 ]; then
-    echo "Erorr::nginx install failure"
-else
-    echo "Nginx install success"
-fi
+VALIDATE $? "NGINX"
 dnf install python3 -y
-if [ $? -ne 0 ]; then
-    echo "Erorr::Python3 install failure"
-else
-    echo "Python3 install success"
-fi
+VALIDATE $? "PYTHON3"
