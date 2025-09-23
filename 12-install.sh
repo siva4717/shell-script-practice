@@ -11,6 +11,7 @@ VALIDATE(){
         echo "ERROR::$2 installing failure"
     else
         echo "$2 installing success"
+    fi
 }
 
 dnf install mysql -y
