@@ -5,7 +5,7 @@ G="/e[32m"
 N="/e[0m"
 if [ $USER_ID -ne 0 ]; then 
     echo -e "$R You can use root user $N"
-    exit 1
+    
 fi
 
 VALIDATE(){
