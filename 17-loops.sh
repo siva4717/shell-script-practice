@@ -31,7 +31,7 @@ do
     #if exit status is 0 it is already installed -ne 0 then install the package
     if [ $? -ne 0 ]; then
         dnf install $package -y &>>$FILE_LOG
-        VALIDATE $? $package 
+        VALIDATE $? $package &>>$FILE_LOG
     else
         echo "$package is already installed"
     fi
