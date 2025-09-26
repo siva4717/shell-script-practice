@@ -9,11 +9,4 @@ echo "PID of this script:$$"
 sleep 50 &
 echo "PID of the last command of background is:$!"
 
-echo "$@"
-echo "$*"
-echo "$0"
-echo "$PWD"
-echo "$USER"
-echo "$HOME"
-echo "$$"
-echo "$!"
+
