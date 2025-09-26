@@ -6,7 +6,7 @@ Y="\e[33m"
 N="\e[0m"
 FILE_LOG_DIRECTORY="/var/log/shell-script/"
 SCRIPT_NAME=$(echo $0 | cut -d '.' -f1)
-FILE_LOG=$FILE_LOG_DIRECTORY/$SCRIPT_NAME.log
+LOG_FILE=$FILE_LOG_DIRECTORY/$SCRIPT_NAME.log
 mkdir -p $FILE_LOG_DIRECTORY 
 echo -e "$G The script Started at ::: $(date)$N"
 
@@ -25,9 +25,9 @@ VALIDATE(){
 }
 for package in $@
 do
-    dnf installed $package &>>$LOG_FILE
+    dnf installed $package &>> $LOG_FILE
     if [ $? -ne 0 ]; then
-        dnf install $package -y &>>$LOG_FILE
+        dnf install $package -y &>> $LOG_FILE
         VALIDATE $? "$package"
     else
         echo -e "THE $package is already installed $Y skipping $N"
