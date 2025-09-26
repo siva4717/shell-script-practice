@@ -1,7 +1,7 @@
 #?/bin/bash
 NUMBER=$1
 if [ $NUMBER -lt 10 ]; then 
-    echo "The give number $NUMBER is lessthan to 10"
+    echo "The given number $NUMBER is lessthan to 10"
 elif [ $NUMBER -eq 10 ]; then
     echo "The given number $NUMBER is equal to 10"
 else
