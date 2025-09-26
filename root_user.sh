@@ -2,10 +2,10 @@
 
 #check the root user exist or not
 
-start_time="$(date %F.m.d.H.M.S)"
+start_time=date %F
 user_id=$(id -u)
 
-echo "root user: $user_id"
+echo "user: $user_id"
 
 if [ $user_id -ne 0 ]; then
     echo "please use the root user"
