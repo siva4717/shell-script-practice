@@ -4,10 +4,10 @@
 
 start_time=$(date +"%s")
 user_id=$(id -u)
-R="-e[31m"
-G="-e[32m"
-Y="-e[33m"
-N="-e[0m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 echo "script starting time is:$(date +"%F.%H.%M.%S")"
 echo -e "$G user: $user_id $N"
 
