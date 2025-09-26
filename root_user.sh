@@ -17,4 +17,4 @@ sleep 10
 echo "root user:$user_id"
 END_time=$(date +"%s")
 TOTAL_TIME=$(($END_time-$start_time))
-echo "$TOTAL_TIME"
+echo "scrip running time:$TOTAL_TIME seconds"
