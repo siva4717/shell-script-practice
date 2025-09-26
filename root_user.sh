@@ -11,4 +11,4 @@ else
     echo "you are connecting root user"
 fi
 
-echo "root user"
+echo "root user $id"
