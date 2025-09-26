@@ -8,10 +8,10 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-script_name=$(echo $0 | awk -d '.' -f1)
+script_name=$(echo $0 | cut -d '.' -f1)
 FILE_LOG_DIRECTORY="/var/log/shell-script"
 FILE_LOG=$FILE_LOG_DIRECTORY/$script_name.log
-
+mkdir -p /var/log/shell-script
 echo "script starting time is:$(date +"%F.%H.%M.%S")"
 echo -e "$G user: $user_id $N"
 
