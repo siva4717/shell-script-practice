@@ -1,3 +1,3 @@
 #?/bin/bash
 
-echo "print course is:"$COURSE
+echo "Course name is: $course"
