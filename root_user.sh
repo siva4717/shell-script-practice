@@ -32,8 +32,13 @@ validate(){
 
 for package in $@
 do
-    dnf install $package -y 
-    validate $? "$package"
+    dnf list $package 
+    if [ $? != 0 ]; then
+        dnf install $package -y 
+        validate $? "$package"
+    else
+        echo "$package is already installed skip"
+    fi
 done
 
 
