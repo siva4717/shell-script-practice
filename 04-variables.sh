@@ -1,8 +1,9 @@
 #?/bin/bash
+# Arguments
 PERSON1=$1
 PERSON2=$2
 
-echo "$PERSON1::Hi $PERSON2 how are you?"
-echo "$PERSON2::Hi $PERSON1 iam fine, what about you?"
-echo "$PERSON1::iam also fine what are you learning?"
-echo "$PERSON2::iam learning devops in join devops $PERSON1."
+echo "$PERSON1:: Welcome to Alaska $PERSON2"
+echo "$PERSON2:: Thank you $PERSON1, Finally not on Zoom Webinar"
+echo "$PERSON1:: So, do we have a deal"
+echo "$PERSON2:: Yes, if you make Ukraine joins Russia"
