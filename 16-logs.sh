@@ -52,7 +52,7 @@ fi
 dnf list installed python 
 if [ $? -ne 0 ]; then 
     dnf install python  -y &>> $LOG_FILE
-    VALIDATE $? "python " | tee -a $LOG_FILE
+    VALIDATE $? "python" | tee -a $LOG_FILE
 else
     echo -e "python  is already installed $Y SKIPPING $N"
 fi
