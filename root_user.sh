@@ -2,7 +2,7 @@
 
 #check the root user exist or not
 
-start_time=date %F
+start_time=$(date +"%F")
 user_id=$(id -u)
 
 echo "user: $user_id"
