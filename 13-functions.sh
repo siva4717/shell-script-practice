@@ -17,10 +17,10 @@ VALIDATE(){ #functions are recieve inputs through arguments just like shell scri
 }
 
 dnf install mysql -y
-validate $? "mysql"
+VALIDATE $? "mysql"
 
 dnf install nginx -y
-validate $? "nginx"
+VALIDATE $? "nginx"
 
 dnf install python -y
-validate $? "python"
+VALIDATE $? "python"
