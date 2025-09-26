@@ -4,29 +4,28 @@
 
 start_time=$(date +"%s")
 user_id=$(id -u)
+R="-e[31m"
+G="-e[32m"
+Y="-e[33m"
+N="-e[0m"
 echo "script starting time is:$(date +"%F.%H.%M.%S")"
-echo "user: $user_id"
+echo -e "$G user: $user_id $N"
 
 if [ $user_id -ne 0 ]; then
-    echo "please use the root user"
+    echo -e "please use the $R root user $N"
     exit 1
 else
-    echo "you are connecting root user"
+    echo -e "$G you are connecting root user $N"
 fi
 sleep 10
 echo "root user:$user_id"
-END_time=$(date +"%s")
-TOTAL_TIME=$(($END_time-$start_time))
-echo "scrip running time:$TOTAL_TIME seconds"
-
-
 
 
 validate(){
     if [ $1 -ne 0 ]; then 
-        echo "$package Erorr"
+        echo -e "$package $R Erorr $N"
     else
-        echo "Installing $package success"
+        echo -e "Installing $package $G success $N"
     fi
 }
 
@@ -37,9 +36,14 @@ do
         dnf install $package -y 
         validate $? "$package"
     else
-        echo "$package is already installed skip"
+        echo -e "$package is already installed $Y skip $N"
     fi
 done
+
+END_time=$(date +"%s")
+TOTAL_TIME=$(($END_time-$start_time))
+echo -e "$G scrip running time:$TOTAL_TIME seconds $N"
+
 
 
 
