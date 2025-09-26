@@ -4,7 +4,7 @@
 
 user_id=$(id)
 
-if [ $user_id -ne 0 ]; then
+if [ $? -ne 0 ]; then
     echo "please use the root user"
     exit 1
 else
