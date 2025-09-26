@@ -30,7 +30,7 @@ VALIDATE(){ #functions are recieve inputs through arguments just like shell scri
     fi
 }
 
-mkdir -p $LOG_FILE
+mkdir -p $FILE_LOG_DIRECTORY
 VALIDATE $? "$LOG_FILE" | tee -a $LOG_FILE
 #check the if package is installed or not
 dnf list installed mysql 
