@@ -24,16 +24,7 @@ VALIDATE(){
     fi
 }
 #$@
-for package in $@
+for package in $*
 do
-    #check package is installed or not 
-    dnf list installed $package &>>$FILE_LOG
-    #if exit status is 0 it is already installed -ne 0 then install the package
-    if [ $? -ne 0 ]; then
-        dnf install $package -y &>>$FILE_LOG
-        VALIDATE $? $package 
-    else
-        echo "$package is already installed"
-    fi
-
+    echo "$package"
 done
