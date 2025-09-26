@@ -49,11 +49,11 @@ else
     echo -e "mysql is already installed $Y SKIPPING $N"
 fi
 
-dnf list installed python 
+dnf list installed python3
 if [ $? -ne 0 ]; then 
-    dnf install python  -y &>> $LOG_FILE
-    VALIDATE $? "python" | tee -a $LOG_FILE
+    dnf install python3  -y &>> $LOG_FILE
+    VALIDATE $? "python3" | tee -a $LOG_FILE
 else
-    echo -e "python  is already installed $Y SKIPPING $N"
+    echo -e "python3  is already installed $Y SKIPPING $N"
 fi
 
