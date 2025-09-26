@@ -19,3 +19,19 @@ END_time=$(date +"%s")
 TOTAL_TIME=$(($END_time-$start_time))
 echo "scrip running time:$TOTAL_TIME seconds"
 
+
+package=$2
+
+validate(){
+    if [ $1 -ne 0 ]; then 
+        echo "Erorr"
+    else
+        echo "Installing $package success"
+    fi
+}
+
+
+dnf install $package -y 
+validate $? "$package"
+
+
