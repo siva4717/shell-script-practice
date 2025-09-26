@@ -2,7 +2,7 @@
 
 #check the root user exist or not
 
-user_id=$(id)
+user_id=$id
 
 if [ $? -ne 0 ]; then
     echo "please use the root user"
