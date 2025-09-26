@@ -4,7 +4,7 @@
 
 start_time=$(date +"%s")
 user_id=$(id -u)
-
+echo "script starting time is:$(date +"%F")"
 echo "user: $user_id"
 
 if [ $user_id -ne 0 ]; then
@@ -19,4 +19,3 @@ END_time=$(date +"%s")
 TOTAL_TIME=$(($END_time-$start_time))
 echo "scrip running time:$TOTAL_TIME seconds"
 
-date --help
