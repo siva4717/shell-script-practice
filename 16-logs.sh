@@ -33,7 +33,7 @@ VALIDATE(){ #functions are recieve inputs through arguments just like shell scri
 mkdir -p $LOG_FILE
 VALIDATE $? "$LOG_FILE" | tee -a $LOG_FILE
 #check the if package is installed or not
-dnf list installed mysql &>> $LOG_FILE
+dnf list installed mysql 
 if [ $? -ne 0 ]; then 
     dnf install mysql -y &>> $LOG_FILE
     VALIDATE $? "mysql" | tee -a $LOG_FILE
@@ -41,7 +41,7 @@ else
     echo -e "mysql is already installed $Y SKIPPING $N"
 fi
 
-dnf list installed nginx &>> $LOG_FILE 
+dnf list installed nginx
 if [ $? -ne 0 ]; then 
     dnf install nginx -y &>> $LOG_FILE
     VALIDATE $? "nginx" | tee -a $LOG_FILE
@@ -49,7 +49,7 @@ else
     echo -e "mysql is already installed $Y SKIPPING $N"
 fi
 
-dnf list installed python &>> $LOG_FILE
+dnf list installed python 
 if [ $? -ne 0 ]; then 
     dnf install python  -y &>> $LOG_FILE
     VALIDATE $? "python " | tee -a $LOG_FILE
