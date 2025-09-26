@@ -36,7 +36,7 @@ validate(){
 for package in $@
 do
     dnf list $package 
-    if [ $? != 0 ]; then
+    if [ $? -ne 0 ]; then
         dnf install $package -y &>> $FILE_LOG
         validate $? "$package" -tee &>> $FILE_LOG
     else
