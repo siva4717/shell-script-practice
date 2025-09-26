@@ -2,7 +2,7 @@
 
 #check the root user exist or not
 
-start_time=$(date +"%F")
+start_time=$(date +"%s")
 user_id=$(id -u)
 
 echo "user: $user_id"
@@ -15,6 +15,6 @@ else
 fi
 
 echo "root user:$user_id"
-END_time=$(date +"%F")
+END_time=$(date +"%s")
 TOTAL_TIME=$END_time-$start_time
 echo "$TOTAL_TIME"
