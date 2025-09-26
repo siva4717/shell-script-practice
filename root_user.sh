@@ -21,7 +21,7 @@ if [ $user_id -ne 0 ]; then
 else
     echo -e "$G you are connecting root user $N"
 fi
-sleep 10
+
 echo "root user:$user_id"
 
 
