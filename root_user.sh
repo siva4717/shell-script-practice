@@ -17,3 +17,4 @@ fi
 echo "root user:$user_id"
 END_time=$(date +"%F")
 TOTAL_TIME=$END_time-$start_time
+echo "$TOTAL_TIME"
