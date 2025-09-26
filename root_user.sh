@@ -40,7 +40,7 @@ do
     fi
 done
 script_name=$0
-echo"$script_name"
+echo "$script_name"
 END_time=$(date +"%s")
 TOTAL_TIME=$(($END_time-$start_time))
 echo -e "$G scrip running time:$TOTAL_TIME seconds $N"
