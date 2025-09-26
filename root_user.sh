@@ -4,7 +4,7 @@
 
 start_time=$(date +"%s")
 user_id=$(id -u)
-echo "script starting time is:$(date +"%F")"
+echo "script starting time is:$(date +"%F.%H.%M.%s")"
 echo "user: $user_id"
 
 if [ $user_id -ne 0 ]; then
