@@ -20,18 +20,21 @@ TOTAL_TIME=$(($END_time-$start_time))
 echo "scrip running time:$TOTAL_TIME seconds"
 
 
-package=$2
+
 
 validate(){
     if [ $1 -ne 0 ]; then 
-        echo "Erorr"
+        echo "$package Erorr"
     else
         echo "Installing $package success"
     fi
 }
 
+for package in $@
+do
+    dnf install $package -y 
+    validate $? "$package"
+done
 
-dnf install $package -y 
-validate $? "$package"
 
 
