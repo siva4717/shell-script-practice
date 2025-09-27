@@ -1,6 +1,6 @@
 #?/bin/bash
 
-set e
+set -euo pipefail
 
 trap    'echo "There is an error $LINENO , $BASH_COMMAND" ' ERR
 
