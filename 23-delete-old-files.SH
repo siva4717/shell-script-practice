@@ -5,12 +5,12 @@
 #     exit 1
 # fi
 
-SOURCE_DIRECTORY="/var/log/ansible_logs"
+# SOURCE_DIRECTORY="/var/log/ansible_logs"
 
-if [ ! -d $SOURCE_DIRECTORY ]: then
-    echo "the source directory does not exist"
-    exit 1
-fi
+# if [ ! -d $SOURCE_DIRECTORY ]: then
+#     echo "the source directory does not exist"
+#     exit 1
+# fi
 
 find_logs= $(find $SOURCE_DIRECTORY -name '*.log')
 
