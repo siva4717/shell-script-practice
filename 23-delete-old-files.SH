@@ -15,7 +15,7 @@ if [ ! -d $SOURCE_DIRECTORY ]; then
 fi
 
 cd 
-find_logs= $(find $SOURCE_DIRECTORY -name '*.log' type -f)
+find_logs= $(find $SOURCE_DIRECTORY -name '*.log' -type f)
 
 
 while IFS= read -r file_path
