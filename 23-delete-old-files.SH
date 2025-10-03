@@ -1,9 +1,9 @@
-# user_id=$(id -u)
+user_id=$(id -u)
 
-# if [ $user_id -ne 1 ] : then
-#     echo " use root privilage"
-#     exit 1
-# fi
+if [ $user_id -ne 1 ] : then
+    echo " use root privilage"
+    exit 1
+fi
 
 SOURCE_DIRECTORY="/var/log/ansible_logs"
 
