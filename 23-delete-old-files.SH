@@ -15,7 +15,7 @@
 find_logs= $(find $SOURCE_DIRECTORY -name '*.log')
 
 
-while IFS=read -r file_path
+while IFS= read -r file_path
 do 
     echo "the log files are $file_path"
     rm -rf $file_path
