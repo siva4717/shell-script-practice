@@ -7,7 +7,7 @@ fi
 
 
 
-SOURCE_DIRECTORY="/var/log/ansible_logs"
+SOURCE_DIRECTORY="/home/ec2-user/shell-script-practice/"
 
 if [ ! -d $SOURCE_DIRECTORY ]; then
     echo "the source directory does not exist"
