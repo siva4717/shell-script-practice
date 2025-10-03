@@ -7,7 +7,7 @@
 
 SOURCE_DIRECTORY="/var/log/ansible_logs"
 
-if [ ! -d $SOURCE_DIRECTORY ] : then
+if [ ! -d $SOURCE_DIRECTORY ]: then
     echo "the source directory does not exist"
     exit 1
 fi
