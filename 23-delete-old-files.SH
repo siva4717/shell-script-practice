@@ -14,7 +14,7 @@ if [ ! -d $SOURCE_DIRECTORY ]; then
     exit 1
 fi
 
-
+cd 
 find_logs= $(find $SOURCE_DIRECTORY -name '*.log')
 
 
