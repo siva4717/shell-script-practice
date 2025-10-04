@@ -19,7 +19,7 @@ echo "script start date and time is : $(date +"%H.%M.%S")" | tee -a $LOG_FILE
 
 SCRIPT_DIRECTORY=/home/ec2-user/app_logs
 
-if [ ! -d $SCRIPT_DIRECTORY ]: then
+if [ ! -d $SCRIPT_DIRECTORY ]; then
     echo -e "$R script directory does not exist $N"
     exit 1;
 fi 
