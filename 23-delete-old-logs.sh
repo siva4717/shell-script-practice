@@ -24,7 +24,7 @@ if [ ! -d $SCRIPT_DIRECTORY ]; then
     exit 1;
 fi 
 
-files_to_delete=$(find $SCRIPT_DIRECTORy -name "*.log" -type f )
+files_to_delete=$(find $SCRIPT_DIRECTORY -name "*.log" -type f )
 
 while IFS= read -r file_path
 do 
